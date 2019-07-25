@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+    
+    <html>
+    
+        <head>
+    
+            <!-- Responsive Meta Tag -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
+
+            <title>Explore</title>	
+	<style>
+		body{
+			background-color:black;
+		}
+		h1{
+			padding-top: 90px;
+			padding-down: 60px;
+			text-align:center;
+			font-family:"Century Gothic";
+			font-weight:lighter;
+			font-size:70px;
+			color:white;
+		}
+		input[type=text] {
+			width: 160px;
+			box-sizing: border-box;
+			border: 2px solid #ccc;
+			border-radius: 30px;
+			font-size: 16px;
+			background-color: white;
+			background-position: 10px 10px; 
+			background-repeat: no-repeat;
+			padding: 12px 50px 12px 50px;
+		}
+		}
+        #container {
+            width : 250px; 
+            margin: 40px 0px 40px 65px;
+			flex-wrap:left;
+			width:180px;
+        } 
+		#container:hover{
+			opacity:0.5
+		}
+        .card {
+            width: 200px;
+			background-color:white;
+            box-shadow: 3px 3px 15px "black";
+            margin: 20px auto;;
+            text-align: center;
+			border-radius:20px;
+        }
+        .flag {
+            display:inline;
+            margin: auto;
+            width: 100px;
+        }
+        form {
+            text-align: center;
+        }
+        .button{
+			border-radius:30px;
+			background-color:gray;
+			border:none;
+			text-align:center;
+			font-size:15px;
+			padding:10px;
+			width:40px;
+			height:40px;
+			transition:all 0.5s;
+			cursor:pointer;
+			margin:5px;
+		}
+		.button span{
+			cursor:pointer;
+			display:inline-block;
+			position:relative;
+			transition:0.5s;
+		}
+		.button span:after{
+			content:'\00bb';
+			position:absolute;
+			opacity:0;
+			top:0;
+			right:-20px;
+			transition:0.5s;
+		}
+		.button:hover span{
+			padding-right:25px;
+		}
+		.button:hover span:after{
+			opacity:1;
+			right:0;
+		}
+        #search-btn {
+            color: white;
+            background-color:gray;
+            border: none;
+            height: 32px;
+            padding: 0 10px;
+            border-radius:30px;
+        }
+    </style>
+			
+ 
+        </head>	
+    
+        <body>
+			<h1>E X P L O R E</h1>
+            <form>
+                <input type = "text" name = "country_name" id = "country_name" placeholder="Search for a country" required/>
+                <button type = "button" onclick = "searchCountry()" id = "search-btn"><span>GO</span></button>
+            </form>  
+
+            <div id = "container">
+            </div>
+        </body>	
+        <script type = "text/javascript">
+            function searchCountry() {
+                var country_field = document.getElementById("country_name");
+                var country_name, search_results;
+                if(country_field.value == "") {
+                    alert("Please enter a country");
+                } 
+                else {
+                    country_name = country_field.value;
+                    var uri = "https://restcountries.eu/rest/v2/name/" + country_name;
+                    var rr = fetch(uri)
+                    .then(response => {
+                        search_results = response.json().then(response1 => {
+                            var cardContent = "<div class = \"card-container\">";
+                            for(var i = 0; i < response1.length; i++) {
+								"<div>"
+                                cardContent += "<div class = \"card\">"; 
+                                cardContent += "<p>";
+                                cardContent += response1[i].name;
+                                cardContent += "<hr>";
+                                cardContent += "<img src = \" " + "https://www.countryflags.io/" + response1[i].alpha2Code + "/flat/64.png" + " \" class = \"flag\">";
+                                cardContent += "</p> <br><br>";
+                                cardContent += "<a href = \"country.html?alpha2Code=" + response1[i].alpha2Code + " \">View Details</a>";
+                                cardContent += "</div>"; 
+								"</div>"
+                            }
+                            cardContent += "</div>";
+                            document.getElementById("container").innerHTML = cardContent;
+                        })
+                        
+                    })
+                    
+                }
+            }
+        </script>
+    </html>	
+
+    
+    
