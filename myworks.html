@@ -20,10 +20,19 @@
 		font-size:62px;
 		text-align:center;
 		color:white;
+		letter-spacing:13px;
 	}
 	h4{
-		margin-left:-44px;
+		margin-left:5%;
 		font-family:"Century Gothic";
+		letter-spacing: 4px;
+		color:white;
+		padding-top:3%;
+		text-align:center;
+	}
+	h6{
+		margin-left:5%;
+		font-family:"Constantia";
 		color:white;
 		text-align:center;
 	}
@@ -33,21 +42,41 @@
 	}
 	a:hover{
 		color:white;
+		text-decoration:none;
 	}
     a{
 		text-align:center;
 		color:white;
 	}
 	div.des{
-		padding:90px 50px 60px 50px;
+		padding:90px 50px 40px 50px;
 		position:sticky;
 	}
 	
 	img{
-		margin-left:591px;
+		
 		border-radius:50%;
-		width:10%;
+		width:35%;
 		padding:20px;
+		background-color:white;
+	}
+	img:hover{
+		opacity:0.5;
+	}
+	.image span{
+		display: none;
+		position:absolute;
+		top:90px;
+		left: 47%;
+		
+		
+	}
+	.image:hover span{
+		display: block;
+		
+	}
+	.image:hover img{
+		opacity:0.5;
 	}
 	.column{
 		padding-top:30px;
@@ -67,15 +96,63 @@
 </head>
 <body>
 	<div class="des">
-		<h1>M Y W O R K S<h1>
+		<h1>MY WORKS<h1>
 	</div>
+	<div class="row">
 	
-	<div class="column">
-		<a target="_blank" href="https://chandralekhapolepalle.github.io/Bakery/">
-		<img src="cupcake.png" alt="cupcake" >
+	 
+	  <div class="column col-xs-4 col-md-4">
+		<a target="_blank" href="https://www.youtube.com/watch?v=YFbZKJeTzqI">
+		<div class="image">
+		<img src="gf.jpg" alt="BOUTIQUE" >
+		<span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+</svg>
+		</span>
+		</div>
 	  </a>
-		<h4>B A K E R S</h4>
+		<a target="_blank" href="http://geethafashions.herokuapp.com/home"><h4>BOUTIQUE<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 23 23"><
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+</svg></h4></a>
+		<h6> November, 2020 </h6>
 	  </div>
+	  <div class="column col-xs-4 col-md-4">
+		<a target="_blank" href="https://youtu.be/N8Bqr41YWzc">
+		<div class="image">
+		<img src="archi.png" alt="CORPORATE" >
+		<span>
+		<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-play-circle" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z"/>
+</svg>
+		</span>
+		</div>
+	  </a>
+		<a target="_blank" href="https://youtu.be/N8Bqr41YWzc"><h4>CORPORATE<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 23 23"><
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+</svg></h4></a>
+		<h6> January, 2021 </h6>
+	  </div>
+	  <div class="column col-xs-4 col-md-4">
+		<a target="_blank" href="">
+		<div class="image">
+		<img src="cupcake.png" alt="BAKERS" >
+		
+		</div>
+	  </a>
+		<a target="_blank" href="https://chandralekhapolepalle.github.io/Bakery/"><h4>PASTRY SHOP<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 23 23"><
+  <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+</svg></h4>	
+</a>
+		<h6> September, 2018 </h6>
+	  </div>
+	 </div>
+	 
 	<div class="git">  
 	<p style="color:white;">GitHub Link</p>
 	<p>
